@@ -1,0 +1,137 @@
+:root {
+  --main-color: #200116;
+  --secondary-color: #020524;
+  --font-color: #6de2f7;
+  --font-size-lg: 1.4rem;
+  --margin-base: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: lighter;
+  background-color: #000;
+  color: var(--font-color);
+  line-height: 1.6;
+  padding: 20px;
+  
+}
+h1{
+  color: #35eb87;
+  font-size: calc(1.8rem + 1vw);
+
+}
+h2 {
+  text-align: center;
+  font-size: calc(1.5rem + 1vw);
+  margin-bottom: 20px;
+  color: #35eb87;
+}
+h3{
+  padding: 10px;
+}
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--secondary-color);
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card img {
+  width: 60%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.card audio, .card video {
+  width: 80%;
+  margin-top: 10px;
+}
+
+a:hover{
+  color: #35eb87;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px); 
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+section{
+  animation: fadeIn 1.2s ease forwards; 
+} 
